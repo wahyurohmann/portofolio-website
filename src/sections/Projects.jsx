@@ -89,7 +89,7 @@ const PROJECTS = [
   {
     id: 'p9',
     title: 'Dashboard Covid 19',
-    desc: <img src="public/Tableau Covid 19.png" alt="Dashboard Covid 19" className='project-card_image-preview' />,
+    desc: <img src="/tableau-covid-19.png" alt="Dashboard Covid 19" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Tableau'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -98,7 +98,7 @@ const PROJECTS = [
   {
     id: 'p10',
     title: 'Dashboard PDRB',
-    desc: <img src="public/Tableau PDRB.png" alt="Dashboard PDRB" className='project-card_image-preview' />,
+    desc: <img src="/tableau-pdrb.png" alt="Dashboard PDRB" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Tableau'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -107,7 +107,7 @@ const PROJECTS = [
   {
     id: 'p11',
     title: 'Dashboard Tokokita',
-    desc: <img src="public/Looker Tokokita.png" alt="Dashboard Tokokita" className='project-card_image-preview' />,
+    desc: <img src="/looker-tokokita.png" alt="Dashboard Tokokita" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Google Looker Studio'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -116,7 +116,7 @@ const PROJECTS = [
   {
     id: 'p12',
     title: 'Superstore Dashboard',
-    desc: <img src="public/Looker Superstore.png" alt="Dashboard Superstore" className='project-card_image-preview' />,
+    desc: <img src="/looker-superstore.png" alt="Dashboard Superstore" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Google Looker Studio'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -134,7 +134,7 @@ const PROJECTS = [
   {
     id: 'p14',
     title: 'Dashboard PHI Mart',
-    desc: <img src="public/pbi phi.png" alt="Dashboard PHI Mart" className='project-card_image-preview' />,
+    desc: <img src="/pbi-phi.png" alt="Dashboard PHI Mart" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Power BI'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -143,7 +143,7 @@ const PROJECTS = [
   {
     id: 'p15',
     title: 'Dashboard PBI Superstore',
-    desc: <img src="public/pbi superstore.png" alt="Dashboard PBI Superstore" className='project-card_image-preview' />,
+    desc: <img src="/pbi-superstore.png" alt="Dashboard PBI Superstore" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Power BI'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -152,7 +152,7 @@ const PROJECTS = [
   {
     id: 'p16',
     title: 'Grafana Covid Dashboard',
-    desc: <img src="public/grafana.png" alt="Grafana Covid Dashboard" className='project-card_image-preview' />,
+    desc: <img src="/grafana.png" alt="Grafana Covid Dashboard" className='project-card_image-preview' />,
     tags: ['Dashboard Analytics', 'Data Visualization', 'Grafana'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',

@@ -138,7 +138,7 @@ export default function About() {
               {/* Avatar */}
               <div className="about__avatar">
                 <div className="about__avatar">
-                  <img src="/src/assets/myphoto.png" alt="Wahyu" className="about__avatar-img" />
+                  <img src="/myphoto.png" alt="Wahyu" className="about__avatar-img" />
                 </div>
                 {/* <div className="about__avatar-initials">WD</div>
                 <div className="about__avatar-label">AI Engineer</div> */}
