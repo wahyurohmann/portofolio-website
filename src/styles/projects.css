@@ -1,0 +1,270 @@
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+
+.projects {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__orb-1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: -150px;
+  opacity: 0.5;
+}
+
+.projects__orb-2 {
+  width: 320px;
+  height: 320px;
+  bottom: -80px;
+  left: -100px;
+  opacity: 0.4;
+}
+
+/* Filter tabs */
+.projects__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.projects__filter-btn {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
+}
+
+.projects__filter-btn:hover {
+  color: var(--clr-light-green);
+  border-color: rgba(154, 216, 114, 0.3);
+  background: rgba(154, 216, 114, 0.05);
+}
+
+.projects__filter-btn.active {
+  color: #fff;
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(70, 132, 50, 0.3);
+}
+
+/* ── Grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Project Card ── */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  height: 100%;
+}
+
+/* Top gradient accent line */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+/* Corner glow */
+.project-card::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(154, 216, 114, 0.12) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.project-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  background: var(--bg-card-hover);
+}
+
+.project-card:hover::before,
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Card number badge */
+.project-card__number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Icon area */
+.project-card__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: rgba(154, 216, 114, 0.1);
+  border: 1px solid rgba(154, 216, 114, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-light-green);
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+/* Tambahkan ini di projects.css */
+
+.project-card__image-preview {
+  width: 100%;
+  height: 180px;
+  /* Kamu bisa sesuaikan tinggi ini (misal 150px - 200px) */
+  object-fit: cover;
+  /* Ini kuncinya agar gambar 'fit' dan terpotong rapi */
+  border-radius: var(--radius-md);
+  /* Agar sudutnya melengkung sesuai desain card */
+  margin-top: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+/* Opsional: Efek zoom sedikit saat card di-hover agar lebih premium */
+.project-card:hover .project-card__image-preview {
+  transform: scale(1.02);
+  border-color: var(--clr-light-green);
+}
+
+.project-card:hover .project-card__icon {
+  background: rgba(154, 216, 114, 0.15);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Title */
+.project-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  padding-right: 1.5rem;
+  /* avoid overlap with number badge */
+}
+
+/* Description */
+.project-card__desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+/* Tags */
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-card__tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--clr-light-green);
+  background: rgba(154, 216, 114, 0.08);
+  border: 1px solid rgba(154, 216, 114, 0.18);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+/* View button */
+.project-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: auto;
+}
+
+.project-card__view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-light-green);
+  background: rgba(154, 216, 114, 0.08);
+  border: 1px solid rgba(154, 216, 114, 0.2);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
+  text-decoration: none;
+}
+
+.project-card__view-btn:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(70, 132, 50, 0.3);
+}
+
+/* Show more button */
+.projects__show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/* Responsive grid */
+@media (max-width: 1100px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
