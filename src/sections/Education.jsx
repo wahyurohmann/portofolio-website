@@ -34,7 +34,7 @@ const EDUCATION = [
     location: 'Blitar, East Java',
     period: '2020 – 2023',
     gpa: null,
-    description: 'Completed secondary education with a focus on the natural sciences, which includes chemistry, physics, biology and mathematics',
+    description: 'Completed secondary education with a focus on the natural sciences, which includes chemistry, physics, biology and mathematics.',
     logo: logoSmaga,
   },
 ];
