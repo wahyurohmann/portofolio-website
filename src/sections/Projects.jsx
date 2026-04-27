@@ -7,7 +7,9 @@ import {
   TrendingUp, Shield, Sparkles,
   ShoppingBasket,
   Languages,
-  ScatterChart
+  ScatterChart,
+  ChevronDown,
+  SlidersHorizontal,
 } from 'lucide-react';
 import '../styles/projects.css';
 import { img } from 'framer-motion/client';
@@ -210,10 +212,16 @@ const gridVariant = {
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const filtered = activeFilter === 'All'
     ? PROJECTS
     : PROJECTS.filter(p => p.category === activeFilter);
+
+  const handleSelect = (cat) => {
+    setActiveFilter(cat);
+    setDropdownOpen(false);
+  };
 
   return (
     <section className="projects section" id="projects">
@@ -238,24 +246,74 @@ export default function Projects() {
           <div className="section-heading__line" />
         </motion.div>
 
-        {/* Filter tabs */}
+        {/* Filter dropdown */}
         <motion.div
-          className="projects__filters"
+          className="projects__filter-wrapper"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          {CATEGORIES.map(cat => (
+          <div className="projects__dropdown">
+            {/* Trigger */}
             <button
-              key={cat}
-              className={`projects__filter-btn ${activeFilter === cat ? 'active' : ''}`}
-              onClick={() => setActiveFilter(cat)}
-              id={`filter-${cat.toLowerCase()}`}
+              id="filter-dropdown-trigger"
+              className="projects__dropdown-trigger"
+              onClick={() => setDropdownOpen(prev => !prev)}
+              aria-haspopup="listbox"
+              aria-expanded={dropdownOpen}
             >
-              {cat}
+              <SlidersHorizontal size={14} className="projects__dropdown-icon" />
+              <span className="projects__dropdown-label">Category</span>
+              <span className="projects__dropdown-active">{activeFilter}</span>
+              <ChevronDown
+                size={14}
+                className={`projects__dropdown-chevron ${dropdownOpen ? 'open' : ''}`}
+              />
             </button>
-          ))}
+
+            {/* Menu */}
+            <AnimatePresence>
+              {dropdownOpen && (
+                <motion.ul
+                  className="projects__dropdown-menu"
+                  role="listbox"
+                  initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                  transition={{ duration: 0.18, ease: 'easeOut' }}
+                >
+                  {CATEGORIES.map(cat => {
+                    const count = cat === 'All' ? PROJECTS.length : PROJECTS.filter(p => p.category === cat).length;
+                    return (
+                      <li
+                        key={cat}
+                        role="option"
+                        aria-selected={activeFilter === cat}
+                        className={`projects__dropdown-item ${activeFilter === cat ? 'active' : ''}`}
+                        onClick={() => handleSelect(cat)}
+                        id={`filter-${cat.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        <span className="projects__dropdown-item-name">{cat}</span>
+                        <span className="projects__dropdown-item-count">{count}</span>
+                      </li>
+                    );
+                  })}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Active filter pill */}
+          {activeFilter !== 'All' && (
+            <button
+              className="projects__filter-clear"
+              onClick={() => setActiveFilter('All')}
+              title="Clear filter"
+            >
+              ✕ {activeFilter}
+            </button>
+          )}
         </motion.div>
 
         {/* Project grid */}

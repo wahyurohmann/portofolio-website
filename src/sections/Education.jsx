@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
+import logoPens from '../assets/logo-pens.png';
+import logoSmaga from '../assets/logo-smaga.png';
 import '../styles/education.css';
 
 /* ── Animation variants ── */
@@ -22,16 +24,18 @@ const EDUCATION = [
     location: 'Surabaya, East Java',
     period: '2023 – Present',
     gpa: '3.69 / 4.00',
-    description: 'Mempelajari terkait analisis dan pengolahan mulai dari data terstruktur hingga tidak terstruktur menggunakan berbagai metode diantaranya statistik, machine learning, dan deep learning. Selain itu, saya juga turut mengembangkan project baik secara mandiri maupun kelompok',
+    description: 'Studied about data analysis and processing data covering both structured and unstructured data—using various methods, including statistics, machine learning and deep learning. Furthermore, data visualisation using visualisation tools is an essential part of this work. In addition, I have also been involved in developing projects, both independently and as part of a team.',
+    logo: logoPens,
   },
   {
     id: 'edu-2',
-    degree: 'Ilmu Pengetahuan Alam',
+    degree: 'Natural Science',
     institution: 'SMA Negeri 3 Blitar',
     location: 'Blitar, East Java',
     period: '2020 – 2023',
     gpa: null,
-    description: 'Menempuh pendidikan menengah dengan konsentrasi pada bidang MIPA meliputi kimia, fisika, biologi, dan matematika',
+    description: 'Completed secondary education with a focus on the natural sciences, which includes chemistry, physics, biology and mathematics',
+    logo: logoSmaga,
   },
 ];
 
@@ -53,7 +57,7 @@ export default function Education() {
         >
           <span className="section-heading__label">Background</span>
           <h2 className="section-heading__title">
-            My <span>Education</span>
+            <span>Education</span>
           </h2>
           <div className="section-heading__line" />
         </motion.div>
@@ -69,9 +73,13 @@ export default function Education() {
           {EDUCATION.map(edu => (
             <motion.div key={edu.id} className="edu-item" variants={itemVariant}>
 
-              {/* Node icon */}
+              {/* Institution logo node */}
               <div className="edu-item__node" aria-hidden="true">
-                <GraduationCap size={22} />
+                <img
+                  src={edu.logo}
+                  alt={`${edu.institution} logo`}
+                  className="edu-item__logo"
+                />
               </div>
 
               {/* Card */}

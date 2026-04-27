@@ -65,27 +65,24 @@
   flex-shrink: 0;
   width: 62px;
   height: 62px;
-  border-radius: var(--radius-md);
-  background: var(--bg-card);
+  border-radius: 12px;
+  background: #ffffff;
   border: 1.5px solid rgba(255,160,46,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
+  overflow: hidden;
   box-shadow: 0 0 0 6px rgba(255,160,46,0.05), var(--shadow-md);
-  color: var(--clr-orange);
-  font-weight: 800;
-  font-size: 1.1rem;
   transition: all var(--transition-base);
-  letter-spacing: -0.02em;
 }
 
 .exp-item:hover .exp-item__node {
-  background: rgba(255,160,46,0.1);
+  background: #ffffff;
   border-color: var(--clr-orange);
   box-shadow: 0 0 0 8px rgba(255,160,46,0.07), var(--shadow-glow-orange);
-  transform: scale(1.06) rotate(3deg);
+  transform: scale(1.06);
 }
 
 /* Card */
@@ -248,7 +245,15 @@
 @media (max-width: 640px) {
   .exp__timeline::before { left: 20px; }
   .exp-item { gap: 1.25rem; }
-  .exp-item__node { width: 42px; height: 42px; font-size: 0.8rem; border-radius: var(--radius-sm); }
+  .exp-item__node { width: 42px; height: 42px; border-radius: 8px; }
   .exp-item__card { padding: 1.25rem; }
   .exp-item__card::after { display: none; }
+}
+
+/* Logo inside the experience node */
+.exp-item__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
 }

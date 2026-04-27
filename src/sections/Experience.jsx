@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 import {
-  Briefcase,
   Calendar,
   Building2,
-  CheckCircle
 } from 'lucide-react';
+import logoTm from '../assets/logo-tm.png';
 import '../styles/experience.css';
 
 /* ── Animation variants ── */
@@ -26,7 +25,7 @@ const EXPERIENCES = [
     company: 'PT Inovasi Teknologi Solusindo - Trustmedis',
     type: 'Internship · Hybrid',
     duration: 'February 2026 – Present',
-    abbr: 'TM',
+    logo: logoTm,
     achievements: [
       'Assisted the team in creating database schemas.',
       'Created ODS master table migrations.',
@@ -74,7 +73,11 @@ export default function Experience() {
 
               {/* Node */}
               <div className="exp-item__node" aria-label={exp.company}>
-                {exp.abbr}
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="exp-item__logo"
+                />
               </div>
 
               {/* Card */}

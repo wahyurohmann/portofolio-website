@@ -24,9 +24,9 @@ const chipVariant = {
 
 /* ── Data ── */
 const SKILLS = [
-  'Python', 'Machine Learning', 'Deep Learning', 'SQL DML Query',
-  'Data Analytics', 'Data Visualizations', 'Data Annotation',
-  'UI/UX Design', 'Git', 'NLP', 'HTML', 'CSS',
+  'Computer Vision', 'Data Analytics', 'Data Annotation',
+  'Deep Learning', 'Grafana', 'Git', 'Looker Studio', 'Machine Learning', 'Metabase', 'NLP', 'Power BI',
+  'Python', 'SQL DML Query', 'Tableau', 'UI/UX Design',
 ];
 
 const STATS = [
@@ -75,7 +75,7 @@ export default function About() {
 
             {/* Bio */}
             <motion.p className="about__bio" variants={fadeUp}>
-              A sixth-semester student in the D4 Applied Data Science Study Program at the Electronic Engineering Polytechnic Institute of Surabaya.
+              A sixth semester student in the D4 Applied Data Science Study Program at the Electronic Engineering Polytechnic Institute of Surabaya.
               {/* AI Engineer specializing in <strong style={{ color: 'var(--clr-light-green)' }}>NLP</strong>,{' '}
               <strong style={{ color: 'var(--clr-orange)' }}>recommendation systems</strong>, and{' '}
               <strong style={{ color: 'var(--clr-yellow)' }}>deep learning</strong>. Currently pursuing a D4 in

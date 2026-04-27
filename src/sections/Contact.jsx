@@ -152,12 +152,12 @@ export default function Contact() {
             viewport={{ once: true, margin: '-60px' }}
           >
             <motion.h3 className="contact__tagline" variants={fadeUp}>
-              Open to <span>collaborations</span>,<br />
-              freelance &amp; full-time roles
+              Open to <span>collaborations,<br />
+                freelance &amp; internship roles</span>
             </motion.h3>
 
             <motion.p className="contact__description" variants={fadeUp}>
-              Whether you have a project idea, a job opportunity, or just want to
+              Whether you have a project idea, an internship opportunity, or just want to
               say hello — my inbox is always open. I'll do my best to get back
               to you within 24 hours.
             </motion.p>
@@ -273,7 +273,7 @@ export default function Contact() {
                         name="subject"
                         type="text"
                         className="contact__input"
-                        placeholder="Project Collaboration / Job Opportunity…"
+                        placeholder="Project Collaboration / Internship Opportunity…"
                         value={form.subject}
                         onChange={handleChange}
                         required
