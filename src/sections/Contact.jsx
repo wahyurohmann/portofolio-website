@@ -157,7 +157,7 @@ export default function Contact() {
             </motion.h3>
 
             <motion.p className="contact__description" variants={fadeUp}>
-              Whether you have a project idea, an internship opportunity, or just want to
+              Whether you have a project idea, an internship opportunity or just want to
               say hello, my inbox is always open. I'll do my best to get back
               to you within 24 hours.
             </motion.p>
