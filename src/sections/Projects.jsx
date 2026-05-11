@@ -16,10 +16,21 @@ import { img } from 'framer-motion/client';
 
 /* ── 20 Project cards ── */
 const PROJECTS = [
+  //   {
+  //   id: 'p1',
+  //   title: '...',
+  //   image: '/project-text-summarization.png',   // ← tambah field image
+  //   desc: 'Teks deskripsi singkat...',           // ← desc tetap teks biasa
+  //   tags: [...],
+  //   icon: ...,
+  //   category: '...',
+  //   link: '...',
+  // }
   {
     id: 'p1',
     title: 'Text Summarization of Netflix App Reviews Using the Bidirectional and Auto-Regressive Transformers (BART) and Text-to-Text Transfer Transformer (T5) Methods',
-    desc: '•	Building a model to summarize Netflix app reviews on the Google Play Store using the BART and T5 transformer methods.',
+    image: '/1-text-summarization.JPG',
+    desc: 'Building a model to summarize Netflix app reviews on the Google Play Store using the BART and T5 transformer methods.',
     tags: ['BART', 'NLP', 'Python', 'T5'],
     icon: <Languages size={18} />,
     category: 'NLP',
