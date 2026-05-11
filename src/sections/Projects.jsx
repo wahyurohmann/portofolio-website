@@ -12,7 +12,7 @@ import {
   SlidersHorizontal,
 } from 'lucide-react';
 import '../styles/projects.css';
-import { img } from 'framer-motion/client';
+
 
 /* ── 20 Project cards ── */
 const PROJECTS = [
@@ -39,6 +39,7 @@ const PROJECTS = [
   {
     id: 'p2',
     title: 'Market Basket Analysis Using The Apriori Algorithm',
+    image: '/2-market-basket.JPG',
     desc: 'Building a clustering model for market basket analysis using the Apriori algorithm. Market basket analysis plays a role in determining product layout, identifying product purchase patterns, and determining product bundles.',
     tags: ['Apriori Algorithm', 'Association Rule', 'Python'],
     icon: <Cpu size={18} />,
@@ -48,7 +49,8 @@ const PROJECTS = [
   {
     id: 'p3',
     title: 'Multivariate Linear Regression Analysis of the Effect of the Human Development Index, the Open Unemployment Rate, and Economic Growth on the Number of People Living in Poverty in East Nusa Tenggara Province in 2022',
-    desc: 'Analysing and processing data using multiple linear regression to determine the effect of the independent variables the Human Development Index, the open unemployment rate, and economic growth—on the dependent variable, the number of people living in poverty in East Nusa Tenggara Province in 2022.',
+    image: '/3-reglin-smt1.JPG',
+    desc: 'Analysing and processing data using multiple linear regression to determine the effect of the independent variables—the Human Development Index, the open unemployment rate, and economic growth—on the dependent variable, the number of people living in poverty in East Nusa Tenggara Province in 2022.',
     tags: ['Multiple Linear Regression', 'R Programming Languange', 'Statistics'],
     icon: <ScatterChart size={18} />,
     category: 'Data Analytics',
@@ -57,7 +59,8 @@ const PROJECTS = [
   {
     id: 'p4',
     title: 'Classification of Well Water Quality in DKI Jakarta Province Using Discriminant Analysis',
-    desc: 'Developed a classification model to classify well water quality in DKI Jakarta Province into 4 categories: good, slightly contaminated, moderately contaminated, and heavily contaminated.    ',
+    image: '/4-water-quality.JPG',
+    desc: 'Developed a classification model to classify well water quality in DKI Jakarta Province into 4 categories: good, slightly contaminated, moderately contaminated, and heavily contaminated.',
     tags: ['Discriminant Analysis', 'Statistics'],
     icon: <ScatterChart size={18} />,
     category: 'Data Analytics',
@@ -66,7 +69,8 @@ const PROJECTS = [
   {
     id: 'p5',
     title: 'Heart Disease Prediction',
-    desc: '•	Building a machine learning model to predict the likelihood of an individual being at risk for heart disease and applying hyperparameter tuning to find the optimal parameters and improve the accuracy of the machine learning model.    ',
+    image: '/5-heart-disease.JPG',
+    desc: 'Building a machine learning model to predict the likelihood of an individual being at risk for heart disease and applying hyperparameter tuning to find the optimal parameters and improve the accuracy of the machine learning model.',
     tags: ['Hyperparameter Tuning', 'ML', 'Prediction', 'Python'],
     icon: <Cpu size={18} />,
     category: 'ML',
@@ -75,6 +79,7 @@ const PROJECTS = [
   {
     id: 'p6',
     title: 'Analysis of Macroeconomic Factors Affecting High Levels of Foreign Direct Investment (FDI) in Indonesia Using Probit Regression',
+    image: '/6-fdi.JPG',
     desc: 'Developed a probit regression model to determine the probability of high foreign direct investment in Indonesia based on economic factors such as exports of goods and services, GDP growth, inflation, the official exchange rate, interest rates, and remittances.',
     tags: ['Econometrcs', 'Macroeconomic', 'Probit Regression'],
     icon: <ScatterChart size={18} />,
@@ -84,6 +89,7 @@ const PROJECTS = [
   {
     id: 'p7',
     title: 'Implementation of YOLOv8 and YOLOv26 in Brain Tumor Detection',
+    image: '/7-yolo26.jpg',
     desc: 'Building deep learning models to detect brain tumors. The input data consists of brain MRI scans. The model was trained using two different methods YOLOv8n and YOLOv26m.',
     tags: ['Computer Vision', 'Deep Learning', 'Object Detection', 'YOLO'],
     icon: <Cpu size={18} />,
@@ -92,7 +98,8 @@ const PROJECTS = [
   },
   {
     id: 'p8',
-    title: 'Ecovista: Application of Principal COmponents Analysis using Alternating Least Square on Mixed Data Scale and Density Based Clustering for Economic Segmentation of Province in Indonesia',
+    title: 'Ecovista: Application of Principal Components Analysis using Alternating Least Square on Mixed Data Scale and Density Based Clustering for Economic Segmentation of Province in Indonesia',
+    image: '/8-ecovista.jpg',
     desc: 'Reducing the dimensionality of mixed-scale data in Indonesia’s economic data and performing economic segmentation of Indonesia’s provinces using a clustering method that is robust to outliers and visualizing the clustering results in a dashboard.',
     tags: ['DBSCAN', 'PRINCALS', 'Segmentation Analysis'],
     icon: <ScatterChart size={18} />,
@@ -102,7 +109,8 @@ const PROJECTS = [
   {
     id: 'p9',
     title: 'Dashboard Covid 19',
-    desc: <img src="/tableau-covid-19.png" alt="Dashboard Covid 19" className='project-card_image-preview' />,
+    image: '/tableau-covid-19.png',
+    desc: 'Interactive COVID-19 dashboard built with Tableau, visualizing case trends, recoveries, and mortality rates.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Tableau'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -111,7 +119,8 @@ const PROJECTS = [
   {
     id: 'p10',
     title: 'Dashboard PDRB',
-    desc: <img src="/tableau-pdrb.png" alt="Dashboard PDRB" className='project-card_image-preview' />,
+    image: '/tableau-pdrb.png',
+    desc: 'Dynamic dashboard presenting the Gross Regional Domestic Product (GRDP) analysis for Indonesian provinces.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Tableau'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -120,7 +129,8 @@ const PROJECTS = [
   {
     id: 'p11',
     title: 'Dashboard Tokokita',
-    desc: <img src="/looker-tokokita.png" alt="Dashboard Tokokita" className='project-card_image-preview' />,
+    image: '/looker-tokokita.png',
+    desc: 'Comprehensive sales and inventory dashboard for Tokokita, built with Google Looker Studio.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Google Looker Studio'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -129,7 +139,8 @@ const PROJECTS = [
   {
     id: 'p12',
     title: 'Superstore Dashboard',
-    desc: <img src="/looker-superstore.png" alt="Dashboard Superstore" className='project-card_image-preview' />,
+    image: '/looker-superstore.png',
+    desc: 'Superstore performance dashboard using Looker Studio to track revenue, profit, and customer segments.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Google Looker Studio'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -138,7 +149,8 @@ const PROJECTS = [
   {
     id: 'p13',
     title: 'Website Perpustakaan',
-    desc: 'This project is a simple library website created using HTML alone. Its main focus is on understanding the basic structure of a website, page navigation and information flow without the use of CSS or JavaScript. Although simple, the website already features several interconnected main pages that represent a library system in general.',
+    image: '/9-perpustakaan.JPG',
+    desc: 'A simple library website built with pure HTML to understand web structure and navigation.',
     tags: ['HTML', 'Web Development'],
     icon: <Code2 size={18} />,
     category: 'Web Development',
@@ -147,7 +159,8 @@ const PROJECTS = [
   {
     id: 'p14',
     title: 'Dashboard PHI Mart',
-    desc: <img src="/pbi-phi.png" alt="Dashboard PHI Mart" className='project-card_image-preview' />,
+    image: '/pbi-phi.png',
+    desc: 'Business intelligence dashboard for PHI Mart created using Power BI for retail analytics.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Power BI'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -156,7 +169,8 @@ const PROJECTS = [
   {
     id: 'p15',
     title: 'Dashboard PBI Superstore',
-    desc: <img src="/pbi-superstore.png" alt="Dashboard PBI Superstore" className='project-card_image-preview' />,
+    image: '/pbi-superstore.png',
+    desc: 'Power BI dashboard for Superstore data, visualizing sales trends and geographical performance.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Power BI'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -165,7 +179,8 @@ const PROJECTS = [
   {
     id: 'p16',
     title: 'Grafana Covid Dashboard',
-    desc: <img src="/grafana.png" alt="Grafana Covid Dashboard" className='project-card_image-preview' />,
+    image: '/grafana.png',
+    desc: 'Real-time monitoring dashboard for COVID-19 data using Grafana and Prometheus.',
     tags: ['Dashboard Analytics', 'Data Visualization', 'Grafana'],
     icon: <PieChart size={18} />,
     category: 'Data Visualizations',
@@ -347,6 +362,17 @@ export default function Projects() {
                 <span className="project-card__number">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
+
+                {/* ── Gambar preview ── */}
+                {project.image && (
+                  <div className="project-card__image-wrapper">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="project-card__image-preview"
+                    />
+                  </div>
+                )}
 
                 <div className="project-card__icon" aria-hidden="true">
                   {project.icon}
